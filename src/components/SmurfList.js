@@ -7,10 +7,6 @@ import { fetchSmurfs } from '../actions';
  const SmurfList = (props) => {
     const { smurfs, isFetching, error } = props;
 
-    // useEffect(() => {
-    //     props.fetchSmurfs();
-    // }, []);
-
     if (error) {
         return <h2>We got an error: {error}</h2>;
       }
