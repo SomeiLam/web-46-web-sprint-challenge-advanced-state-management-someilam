@@ -3,7 +3,8 @@ import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL, ADD_SMURF, SET_ERROR } from './
 const initialState = {
     smurfs: [],
     isFetching: false,
-    error: ""
+    error: "",
+    formError: ""
 }
 
 const reducer = (state = initialState, action) => {
@@ -39,7 +40,7 @@ const reducer = (state = initialState, action) => {
         case (SET_ERROR):
             return ({
                 ...state,
-                error: action.payload
+                formError: action.payload
             })
         default:
             return state;
